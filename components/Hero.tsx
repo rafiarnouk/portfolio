@@ -21,8 +21,8 @@ export default function Hero() {
           <p className="text-lg">
             Hello! I am
           </p>
-          <h1 className="text-5xl md:text-6xl font-heading leading-tight">
-            RAFI ARNOUK
+          <h1 className="text-5xl md:text-6xl font-heading leading-tight uppercase">
+            Rafi Arnouk
           </h1>
           <p className="text-lg leading-relaxed">
             I'm a <span className="font-bold">Computer Science student </span> 
