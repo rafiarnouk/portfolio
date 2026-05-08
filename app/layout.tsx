@@ -17,6 +17,9 @@ const boldonse = Boldonse({
 export const metadata: Metadata = {
   title: "Rafi Arnouk Portfolio",
   description: "Rafi Arnouk Portfolio",
+  icons: {
+    icon: "/ralogo.svg",
+  },
 };
 
 export default function RootLayout({

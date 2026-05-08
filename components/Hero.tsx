@@ -1,11 +1,24 @@
+"use client";
+
 import Image from "next/image";
-import TiltImage from "@/components/TiltImage";
+import { motion, type Variants } from "framer-motion";
+
+const fadeIn: Variants = {
+  hidden: { opacity: 0, y: 26 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.7, ease: "easeOut" } },
+};
 
 export default function Hero() {
   return (
     <main className="max-w-6xl mx-auto px-8 py-16">
-      <section className="grid md:grid-cols-5 gap-12 items-center">
-        <div className="md:col-span-3">
+      <motion.section
+        className="grid md:grid-cols-5 gap-12 items-center"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+        variants={fadeIn}
+      >
+        <motion.div className="md:col-span-3" variants={fadeIn}>
           <div className="w-full aspect-square relative overflow-hidden group">
             <Image
               src="/rablob.png"
@@ -15,8 +28,7 @@ export default function Hero() {
               priority
             />
           </div>
-          {/* <TiltImage /> */}
-        </div>
+        </motion.div>
         <div className="md:col-span-2 space-y-6 text-primary">
           <p className="text-lg">
             Hello! I am
@@ -35,7 +47,7 @@ export default function Hero() {
             in Vancouver, Canada. */}
           </p>
         </div>
-      </section>
+      </motion.section>
     </main>
   )
 }

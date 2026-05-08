@@ -1,5 +1,32 @@
+"use client";
+
 import Image from "next/image";
 import { Experience, experiences } from "@/data/experiences";
+import { motion, type Variants } from "framer-motion";
+
+const container: Variants = {
+  hidden: {},
+  visible: {
+    transition: {
+      staggerChildren: 0.25,
+    },
+  },
+};
+
+const item: Variants = {
+  hidden: {
+    opacity: 0,
+    y: 100,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.5,
+      ease: "easeOut",
+    },
+  },
+};
 
 function Badge({ children }: { children: React.ReactNode }) {
     return (
@@ -11,7 +38,7 @@ function Badge({ children }: { children: React.ReactNode }) {
 
 function ExperienceCard({ exp }: { exp: Experience }) {
   return (
-    <div className="flex gap-6 p-6 rounded-2xl bg-primary/5 hover:-translate-y-1 transition">
+    <motion.div className="flex gap-6 p-6 rounded-2xl bg-primary/10 hover:scale-102 transition">
       <div className="w-14 h-14 relative shrink-0">
         <Image
           src={exp.logo}
@@ -25,7 +52,7 @@ function ExperienceCard({ exp }: { exp: Experience }) {
           <h3 className="text-xl mb-1">
             {exp.company}
           </h3>
-          <p className="text-sm opacity-100">
+          <p className="text-md opacity-100">
             <span className="font-bold">{exp.role}</span> • {exp.start} - {exp.end}
           </p>
         </div>
@@ -42,7 +69,7 @@ function ExperienceCard({ exp }: { exp: Experience }) {
           </div>
         )}
       </div>
-    </div>
+    </motion.div>
   );
 }
 
@@ -52,11 +79,19 @@ export default function Experiences() {
       <h1 className="mb-16 text-5xl font-heading uppercase text-primary text-center">
         Experience
       </h1>
-      <div className="space-y-8">
+      <motion.div
+        className="space-y-8"
+        variants={container}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+      >
         {experiences.map((exp, i) => (
-          <ExperienceCard key={i} exp={exp} />
+          <motion.div key={i} variants={item}>
+            <ExperienceCard exp={exp} />
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
     </section>
   )
 }
