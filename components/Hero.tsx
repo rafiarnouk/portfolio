@@ -1,7 +1,10 @@
 "use client";
 
+import { useState } from "react";
 import Image from "next/image";
 import { motion, type Variants } from "framer-motion";
+import { ChevronRight } from "lucide-react";
+import BioModal from "./BioModal";
 
 const fadeIn: Variants = {
   hidden: { opacity: 0, y: 26 },
@@ -9,6 +12,7 @@ const fadeIn: Variants = {
 };
 
 export default function Hero() {
+  const [isBioOpen, setIsBioOpen] = useState(false);
   return (
     <main className="max-w-6xl mx-auto px-8 py-16">
       <motion.section
@@ -46,8 +50,16 @@ export default function Hero() {
             I am studying Computer Science with a minor in Mathematics at the <span className="font-bold">University of British Columbia </span>
             in Vancouver, Canada. */}
           </p>
+          <button
+            onClick={() => setIsBioOpen(true)}
+            className="inline-flex items-center gap-2 mt-2 px-6 py-4 text-lg bg-secondary text-black font-medium rounded-full hover:bg-secondary/80 transition-colors"
+          >
+            More About Me
+            <ChevronRight className="w-5 h-5" />
+          </button>
         </div>
       </motion.section>
+      <BioModal isOpen={isBioOpen} onClose={() => setIsBioOpen(false)} />
     </main>
   )
 }

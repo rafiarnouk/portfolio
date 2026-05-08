@@ -2,6 +2,7 @@ import Image from "next/image";
 import Hero from "@/components/Hero";
 import Experiences from "@/components/Experiences";
 import Projects from "@/components/Projects";
+import About from "@/components/About";
 import Contact from "@/components/Contact";
 
 function StarDivider() {
@@ -24,6 +25,8 @@ export default function Home() {
       <Experiences />
       {/* <StarDivider />
       <Projects /> */}
+      {/* <StarDivider />
+      <About /> */}
       <StarDivider />
       <Contact />
     </>

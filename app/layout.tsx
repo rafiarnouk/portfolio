@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   title: "Rafi Arnouk Portfolio",
   description: "Rafi Arnouk Portfolio",
   icons: {
-    icon: "/ralogo.svg",
+    icon: "/ralogo-blue.svg",
   },
 };
 

@@ -30,7 +30,7 @@ const item: Variants = {
 
 function Badge({ children }: { children: React.ReactNode }) {
     return (
-      <span className="px-3 py-1 text-sm rounded-full bg-primary text-white font-medium hover:bg-primary/90 transition">
+      <span className="px-3 py-1 text-sm rounded-full bg-secondary text-black font-medium hover:bg-secondary/80 transition">
         {children}
       </span>
     );
@@ -38,7 +38,7 @@ function Badge({ children }: { children: React.ReactNode }) {
 
 function ExperienceCard({ exp }: { exp: Experience }) {
   return (
-    <motion.div className="flex gap-6 p-6 rounded-2xl bg-primary/10 hover:scale-102 transition">
+    <motion.div className="flex gap-6 p-6 rounded-2xl bg-primary/5 hover:scale-102 transition">
       <div className="w-14 h-14 relative shrink-0">
         <Image
           src={exp.logo}
