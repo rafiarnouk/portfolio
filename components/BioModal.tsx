@@ -54,7 +54,7 @@ export default function BioModal({ isOpen, onClose }: BioModalProps) {
                   I am particularly interested in machine learning and its applications in scientific domains. At UBC's Ding Lab, a computational biology research group, I contributed to research efforts by developing a benchmarking framework for evaluating machine learning models that predict the effects of genetic perturbations in cells. I also have structured much of my degree at UBC around this interest, taking courses like CPSC 440 (Advanced Machine Learning) and 436N (Natural Language Processing), while strengthening my mathematical foundations in areas like linear algebra, probability, and optimization through a minor in Mathematics.
                 </p>
                 <p>
-                  Outside of tech, I am interested in linguistics, I love to watch movies, climb, play basketball, draw, and create graphic designs and 3D renders (like the weird balloon thing on the home page).
+                  Outside of tech, I am interested in linguistics, I love to watch movies, climb, play basketball, draw, and create graphic designs and 3D renders (like the balloon thing on the home page).
                 </p>
               </div>
             </motion.div>
