@@ -4,6 +4,7 @@ import Experiences from "@/components/Experiences";
 import Projects from "@/components/Projects";
 import About from "@/components/About";
 import Contact from "@/components/Contact";
+import Footer from "@/components/Footer";
 
 function StarDivider() {
   return (
@@ -29,6 +30,7 @@ export default function Home() {
       <About /> */}
       <StarDivider />
       <Contact />
+      <Footer />
     </>
   );
 }

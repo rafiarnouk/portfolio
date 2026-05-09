@@ -14,7 +14,7 @@ const fadeIn: Variants = {
 export default function Hero() {
   const [isBioOpen, setIsBioOpen] = useState(false);
   return (
-    <main className="max-w-6xl mx-auto px-8 py-16">
+    <main id="top" className="max-w-6xl mx-auto px-8 py-16">
       <motion.section
         className="grid md:grid-cols-5 gap-12 items-center"
         initial="hidden"
@@ -52,9 +52,9 @@ export default function Hero() {
           </p>
           <button
             onClick={() => setIsBioOpen(true)}
-            className="inline-flex items-center gap-2 mt-2 px-6 py-4 text-lg bg-secondary text-black font-medium rounded-full hover:bg-secondary/80 transition-colors"
+            className="inline-flex items-center gap-2 mt-2 px-6 py-4 text-lg bg-secondary text-black font-medium rounded-full hover:bg-secondary/80 transition-colors cursor-pointer"
           >
-            More About Me
+            About Me
             <ChevronRight className="w-5 h-5" />
           </button>
         </div>

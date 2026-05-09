@@ -5,6 +5,7 @@
   --foreground: #171717;
   --primary: #0d3af9;
   --secondary: #67e69e;
+  --lift: #d6daeb;
 }
 
 @theme inline {
@@ -12,8 +13,13 @@
   --color-foreground: var(--foreground);
   --color-primary: var(--primary);
   --color-secondary: var(--secondary);
+  --color-lift: var(--lift);
   --font-sans: var(--font-sans);
   --font-heading: var(--font-heading);
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 /* @media (prefers-color-scheme: dark) {

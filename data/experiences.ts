@@ -18,7 +18,7 @@ export const experiences: Experience[] = [
       "Worked on Alexa Plus on the LLM Runtime and Guardrails Team. I rebuilt and modernized an existing operational tools platform into a new AWS Lambda service, and created an AI tool powered by Claude Sonnet large language models (LLMs) to streamline operational tool creation for future developers."
     ],
     technologies: ["AWS", "Java", "TypeScript", "AWS Lambda", "AWS CDK"],
-    logo: "/amazonlogo.png"
+    logo: "/amznlogo.png"
   },
   {
     company: "Miru Smart Technologies",
@@ -29,7 +29,7 @@ export const experiences: Experience[] = [
       "Built software tools to support scientists working with electrochromic glass, including a platform for querying and visualizing complex experimental data. I also worked on algorithmic problems like optimizing spray paths for manufacturing demos, and helped improve internal systems for experiment tracking and data quality."
     ],
     technologies: ["Python", "MongoDB", "MySQL", "Plotly", "Pandas", "Flask"],
-    logo: "/mirulogo.jpeg"
+    logo: "/mirulogo.png"
   },
   {
     company: "SkyHive",

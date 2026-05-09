@@ -30,7 +30,7 @@ const item: Variants = {
 
 function Badge({ children }: { children: React.ReactNode }) {
     return (
-      <span className="px-3 py-1 text-sm rounded-full bg-secondary text-black font-medium hover:bg-secondary/80 transition">
+      <span className="px-3 py-1 text-sm rounded-full bg-secondary text-black font-bold hover:bg-secondary/80 transition">
         {children}
       </span>
     );
@@ -38,13 +38,13 @@ function Badge({ children }: { children: React.ReactNode }) {
 
 function ExperienceCard({ exp }: { exp: Experience }) {
   return (
-    <motion.div className="flex gap-6 p-6 rounded-2xl bg-primary/5 hover:scale-102 transition">
-      <div className="w-14 h-14 relative shrink-0">
+    <motion.div className="group flex gap-6 p-6 rounded-2xl bg-primary/5 hover:scale-102 transition">
+      <div className="w-20 h-20 relative shrink-0">
         <Image
           src={exp.logo}
           alt={exp.company}
           fill
-          className="object-contain rounded-md"
+          className="object-contain rounded-lg group-hover:scale-110 group-hover:rotate-[-2deg] transition-transform duration-300"
         />
       </div>
       <div className="flex-1 space-y-3">
@@ -53,7 +53,9 @@ function ExperienceCard({ exp }: { exp: Experience }) {
             {exp.company}
           </h3>
           <p className="text-md opacity-100">
-            <span className="font-bold">{exp.role}</span> • {exp.start} - {exp.end}
+            <span className="font-bold">
+              {exp.role}
+            </span> • {exp.start} - {exp.end}
           </p>
         </div>
         {exp.description.map((d, i) => (
@@ -62,7 +64,8 @@ function ExperienceCard({ exp }: { exp: Experience }) {
           </p>
         ))}
         {exp.technologies && (
-          <div className="flex flex-wrap gap-2 pt-2">
+          <div className="flex flex-wrap items-center gap-2 pt-2">
+            <span className="text-sm opacity-100">Technologies:</span>
             {exp.technologies.map((tech, i) => (
               <Badge key={i}>{tech}</Badge>
             ))}
