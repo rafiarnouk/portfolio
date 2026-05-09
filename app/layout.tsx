@@ -15,8 +15,8 @@ const boldonse = Boldonse({
 });
 
 export const metadata: Metadata = {
-  title: "Rafi Arnouk Portfolio",
-  description: "Rafi Arnouk Portfolio",
+  title: "Rafi Arnouk",
+  description: "Rafi Arnouk",
   icons: {
     icon: "/ralogo-blue.svg",
   },

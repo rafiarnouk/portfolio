@@ -14,7 +14,7 @@ const fadeIn: Variants = {
 export default function Hero() {
   const [isBioOpen, setIsBioOpen] = useState(false);
   return (
-    <main id="top" className="max-w-6xl mx-auto px-8 py-16">
+    <main id="top" className="max-w-6xl mx-auto px-8 py-24">
       <motion.section
         className="grid md:grid-cols-5 gap-12 items-center"
         initial="hidden"
